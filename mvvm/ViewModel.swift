@@ -15,7 +15,11 @@ class ViewModel {
     
     private let bag = DisposeBag()
     
-    let models = BehaviorRelay<[Model]>(value: [])
+    var models: Observable<[Model]> {
+        return _models.asObservable()
+    }
+    
+    private let _models = BehaviorRelay<[Model]>(value: [])
     
     func get() {
         let realm = try! Realm()
@@ -30,7 +34,7 @@ class ViewModel {
         
         Observable
             .concat(Observable.just(Array(realm.objects(Model.self))), requestAndSave)
-            .bind(to: models)
+            .bind(to: _models)
             .disposed(by: bag)
     }
 }
