@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.get()
+        viewModel.getTrigger.on(.next(()))
         
         viewModel.models.subscribe(onNext: { [unowned self] models in
             self.setView(models)
