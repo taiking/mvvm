@@ -22,6 +22,7 @@
 		EB76BF3020FF4E57007F5C90 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB76BF2A20FF4E57007F5C90 /* Result.framework */; };
 		EB76BF3220FF4EB1007F5C90 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF3120FF4EB1007F5C90 /* Model.swift */; };
 		EB76BF3420FF4EF7007F5C90 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF3320FF4EF7007F5C90 /* ViewModel.swift */; };
+		EB969DA8210050860018A9D0 /* Action.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB969DA7210050860018A9D0 /* Action.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		EB76BF2A20FF4E57007F5C90 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		EB76BF3120FF4EB1007F5C90 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EB76BF3320FF4EF7007F5C90 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EB969DA7210050860018A9D0 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB969DA8210050860018A9D0 /* Action.framework in Frameworks */,
 				EB76BF2B20FF4E57007F5C90 /* RxSwift.framework in Frameworks */,
 				EB76BF2C20FF4E57007F5C90 /* Realm.framework in Frameworks */,
 				EB76BF2D20FF4E57007F5C90 /* RxCocoa.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		EB76BF2420FF4E57007F5C90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB969DA7210050860018A9D0 /* Action.framework */,
 				EB76BF2920FF4E57007F5C90 /* APIKit.framework */,
 				EB76BF2620FF4E57007F5C90 /* Realm.framework */,
 				EB76BF2820FF4E57007F5C90 /* RealmSwift.framework */,
@@ -196,6 +200,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Action.framework",
 			);
 			outputPaths = (
 			);

@@ -1,3 +1,4 @@
 github "ishkawa/APIKit" "3.2.0"
 github "ReactiveX/RxSwift" "4.2.0"
 github "realm/realm-cocoa"
+github "RxSwiftCommunity/Action"
