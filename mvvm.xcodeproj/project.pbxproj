@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0A8CBA2100766E0038E9A0 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0A8CB92100766E0038E9A0 /* View.xib */; };
+		EB0A8CBC2100768D0038E9A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A8CBB2100768D0038E9A0 /* View.swift */; };
 		EB76BF0D20FF23E1007F5C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF0C20FF23E1007F5C90 /* AppDelegate.swift */; };
 		EB76BF0F20FF23E1007F5C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF0E20FF23E1007F5C90 /* ViewController.swift */; };
 		EB76BF1220FF23E1007F5C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB76BF1020FF23E1007F5C90 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB0A8CB92100766E0038E9A0 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		EB0A8CBB2100768D0038E9A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EB76BF0920FF23E1007F5C90 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76BF0C20FF23E1007F5C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB76BF0E20FF23E1007F5C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				EB76BF3120FF4EB1007F5C90 /* Model.swift */,
 				EB76BF3320FF4EF7007F5C90 /* ViewModel.swift */,
 				EB76BF0E20FF23E1007F5C90 /* ViewController.swift */,
+				EB0A8CB92100766E0038E9A0 /* View.xib */,
+				EB0A8CBB2100768D0038E9A0 /* View.swift */,
 				EB76BF1020FF23E1007F5C90 /* Main.storyboard */,
 				EB76BF1320FF23E3007F5C90 /* Assets.xcassets */,
 				EB76BF1520FF23E3007F5C90 /* LaunchScreen.storyboard */,
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0A8CBA2100766E0038E9A0 /* View.xib in Resources */,
 				EB76BF1720FF23E3007F5C90 /* LaunchScreen.storyboard in Resources */,
 				EB76BF1420FF23E3007F5C90 /* Assets.xcassets in Resources */,
 				EB76BF1220FF23E1007F5C90 /* Main.storyboard in Resources */,
@@ -220,6 +227,7 @@
 				EB76BF0F20FF23E1007F5C90 /* ViewController.swift in Sources */,
 				EB76BF0D20FF23E1007F5C90 /* AppDelegate.swift in Sources */,
 				EB76BF3420FF4EF7007F5C90 /* ViewModel.swift in Sources */,
+				EB0A8CBC2100768D0038E9A0 /* View.swift in Sources */,
 				EB76BF2120FF24E8007F5C90 /* GetRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

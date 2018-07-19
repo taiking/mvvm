@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     private let bag = DisposeBag()
     
-    @IBOutlet weak private var label: UILabel!
+    @IBOutlet weak private var customView: View!
     
     private let viewModel = ViewModel()
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.getAction.elements.subscribe(onNext: { [unowned self] models in
-            self.setView(models)
+            self.customView.setView(models)
         }).disposed(by: bag)
         
         viewModel.getAction.errors.subscribe(onNext: { e in
@@ -33,11 +33,5 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.viewModel.getAction.execute(())
         }
-    }
-    
-    private func setView(_ models: [Model]) {
-        label.text = models
-            .map { "name: \($0.owner.name), name: \($0.repositoryName)\n" }
-            .reduce("") { $0 + $1 }
     }
 }
