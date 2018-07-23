@@ -18,7 +18,7 @@ class Model {
     }
     
     func get() -> Observable<[Entity]> {
-        return Session.sendRequest(request: GetRequest())
+        return Session.shared.sendRequest(request: GetRequest())
     }
     
     func save(entities: [Entity]) {
