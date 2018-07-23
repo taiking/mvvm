@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         viewModel.getAndSave()
         
         viewModel.entities.subscribe(onNext: { [unowned self] entities in
-            print(entities)
             self.customView.setView(entities)
         }).disposed(by: bag)
     }
