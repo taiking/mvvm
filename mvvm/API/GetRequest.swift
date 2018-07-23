@@ -9,7 +9,7 @@
 import APIKit
 
 struct GetRequest: Request {
-    typealias Response = [Model]
+    typealias Response = [Entity]
     
     var dataParser: DataParser {
         return DecodableDataParser()

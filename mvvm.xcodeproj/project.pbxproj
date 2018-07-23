@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB0A8CBA2100766E0038E9A0 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0A8CB92100766E0038E9A0 /* View.xib */; };
 		EB0A8CBC2100768D0038E9A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A8CBB2100768D0038E9A0 /* View.swift */; };
+		EB16BF022105DDC7006EFF5F /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16BF012105DDC7006EFF5F /* Entity.swift */; };
 		EB76BF0D20FF23E1007F5C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF0C20FF23E1007F5C90 /* AppDelegate.swift */; };
 		EB76BF0F20FF23E1007F5C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76BF0E20FF23E1007F5C90 /* ViewController.swift */; };
 		EB76BF1220FF23E1007F5C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB76BF1020FF23E1007F5C90 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		EB0A8CB92100766E0038E9A0 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		EB0A8CBB2100768D0038E9A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		EB16BF012105DDC7006EFF5F /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		EB76BF0920FF23E1007F5C90 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76BF0C20FF23E1007F5C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB76BF0E20FF23E1007F5C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				EB76BF1F20FF24E8007F5C90 /* GetRequest.swift */,
 				EB76BF2020FF24E8007F5C90 /* SessionRx.swift */,
+				EB16BF012105DDC7006EFF5F /* Entity.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				EB76BF2220FF24E8007F5C90 /* SessionRx.swift in Sources */,
 				EB76BF0F20FF23E1007F5C90 /* ViewController.swift in Sources */,
 				EB76BF0D20FF23E1007F5C90 /* AppDelegate.swift in Sources */,
+				EB16BF022105DDC7006EFF5F /* Entity.swift in Sources */,
 				EB76BF3420FF4EF7007F5C90 /* ViewModel.swift in Sources */,
 				EB0A8CBC2100768D0038E9A0 /* View.swift in Sources */,
 				EB76BF2120FF24E8007F5C90 /* GetRequest.swift in Sources */,

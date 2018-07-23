@@ -8,8 +8,6 @@
 
 import UIKit
 import RxSwift
-import APIKit
-import RealmSwift
 
 class ViewController: UIViewController {
     
@@ -22,16 +20,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.getAction.elements.subscribe(onNext: { [unowned self] models in
-            self.customView.setView(models)
-        }).disposed(by: bag)
+        viewModel.getAndSave()
         
-        viewModel.getAction.errors.subscribe(onNext: { e in
-            // Error処理
+        viewModel.entities.subscribe(onNext: { [unowned self] entities in
+            print(entities)
+            self.customView.setView(entities)
         }).disposed(by: bag)
-        
-        DispatchQueue.main.async {
-            self.viewModel.getAction.execute(())
-        }
     }
 }

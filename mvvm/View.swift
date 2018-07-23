@@ -22,8 +22,8 @@ class View: UIView {
         self.addSubview(headerView)
     }
     
-    func setView(_ models: [Model]) {
-        label.text = models
+    func setView(_ entities: [Entity]) {
+        label.text = entities
             .map { "name: \($0.owner.name), name: \($0.repositoryName)\n" }
             .reduce("") { $0 + $1 }
     }

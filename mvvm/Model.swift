@@ -6,26 +6,26 @@
 //  Copyright © 2018年 chocovayashi. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 import RealmSwift
+import APIKit
 
-class Owner: Object, Codable {
-    @objc dynamic var name = ""
+class Model {
     
-    enum CodingKeys: String, CodingKey {
-        case name = "login"
+    func getFromRealm() -> Observable<[Entity]> {
+        let realm = try! Realm()
+        return Observable.just(Array(realm.objects(Entity.self)))
     }
-}
-
-class Model: Object, Codable {
     
-    @objc dynamic var owner: Owner!
-    @objc dynamic var repositoryName = ""
-    @objc dynamic var url = ""
+    func get() -> Observable<[Entity]> {
+        return Session.sendRequest(request: GetRequest())
+    }
     
-    enum CodingKeys: String, CodingKey {
-        case owner
-        case repositoryName = "name"
-        case url = "html_url"
+    func save(entities: [Entity]) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(realm.objects(Entity.self))
+            realm.add(entities)
+        }
     }
 }

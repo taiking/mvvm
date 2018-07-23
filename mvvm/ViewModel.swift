@@ -8,27 +8,25 @@
 
 import RxSwift
 import RxCocoa
-import RealmSwift
-import APIKit
-import Action
 
 class ViewModel {
     
-    let getAction: Action<Void, [Model]>
+    private let model = Model()
     
-    init() {
-        let realm = try! Realm()
-        getAction = Action<Void, [Model]> { _ -> Observable<[Model]> in
-                let requestAndSave = Session.sendRequest(request: GetRequest())
-                    .flatMap { models -> Observable<[Model]> in
-                        try! realm.write {
-                            realm.delete(realm.objects(Model.self))
-                            realm.add(models)
-                        }
-                        return Observable.just(models)
-                }
-                return Observable
-                    .concat(Observable.just(Array(realm.objects(Model.self))), requestAndSave)
+    let entities = BehaviorRelay<[Entity]>(value: [])
+    
+    private let bag = DisposeBag()
+    
+    func getAndSave() {
+        let requestAndSave = model.get()
+            .flatMap { entities -> Observable<[Entity]> in
+                self.model.save(entities: entities)
+                return Observable.just(entities)
         }
+        
+        Observable
+            .concat(model.getFromRealm(), requestAndSave)
+            .bind(to: entities)
+            .disposed(by: bag)
     }
 }
